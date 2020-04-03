@@ -1,7 +1,11 @@
 <template>
   <div>
+    ---------------
+    <br/>
     <input type="text" @input="inputChangeSearchBar"/>
+    <br/>
     {{ message }}
+    --------------
   </div>
 </template>
 
@@ -11,7 +15,7 @@
     methods: {
       inputChangeSearchBar: function(event){
         console.log(event.target.value);
-        this.message = event.target.value.split('').reverse().join('');
+        this.$emit('termChange',event.target.value);
       }
     },
     data: function(){

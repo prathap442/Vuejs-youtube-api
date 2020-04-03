@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <SearchBar />
+      Message2 Emit from the HelloWorldVue to the App.vue .
+      The Emit from the child component to the parent component .
+    <SearchBar v-on:termChange="termChange"></SearchBar>
   </div>
 </template>
 
@@ -13,6 +15,11 @@ export default {
   name: 'App',
   components: {
     SearchBar
+  },
+  methods: {
+    termChange: function(enteredValueInSearchBar){
+      console.log(enteredValueInSearchBar);
+    }
   }
 }
 </script>
