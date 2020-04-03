@@ -1,17 +1,18 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SearchBar />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import SearchBar from './components/SearchBar.vue';
+// HelloWorld: HelloWorld
+// It is not like importing the components here And exporting will also play key role to show on the Vue page
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    SearchBar
   }
 }
 </script>
